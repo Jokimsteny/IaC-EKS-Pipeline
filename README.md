@@ -11,6 +11,7 @@ This project demonstrates an MVP infrastructure-as-code (IaC) pipeline to provis
 - Use Terraform modules for reusable infrastructure
 - Implement CI/CD pipeline via Gitlab CICD
 - Track changes with versioning
+- Mechanisms for Detecting Breaking Changes
 - Promote configurations across environments (dev → test → prod)
 - Include automated testing and breaking change detection
 
@@ -100,6 +101,9 @@ assert.Equal(t, "dev-cluster", clusterName)
 
 - `terraform plan` generates diffs in MRs.
 - Optional: Use `terraform-compliance` or `infracost` to block high-risk changes.
+- Terraform breaking change detection in the plan stage
+- terraform-compliance integration
+- Infracost cost impact checks
 
 ---
 
