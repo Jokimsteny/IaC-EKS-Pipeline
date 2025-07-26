@@ -29,3 +29,23 @@ A modular, environment-driven Infrastructure-as-Code (IaC) pipeline using Terraf
 ├── .github/
 │ └── workflows/
 ├── backend.tf
+
+
+
+
+---
+
+## 🔧 Setup Instructions
+
+### 1. Prerequisites
+
+- AWS CLI configured (`aws configure`)
+- Terraform v1.6+
+- Go (for Terratest)
+- GitHub Actions (CI/CD)
+
+### 2. Clone the Repository
+
+```bash
+git clone https://github.com/Jokimsteny/IaC-EKS-Pipeline.git
+cd iac-eks-pipeline
