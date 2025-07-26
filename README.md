@@ -26,7 +26,17 @@ eks-iac-pipeline/
 │   ├── test/
 │   └── prod/
 ├── iam/                 # IAM roles and policies for EKS cluster & nodes
-├── modules/eks/         # Terraform module for EKS cluster & node groups
+│   └── iam-roles.tf
+├── modules/# Reusable Terraform modules
+│   └── eks/             # Terraform module for EKS cluster & node groups
+│       ├── main.tf
+│       ├── variables.tf
+│       └── outputs.tf
+│   └── vpc/             # Terraform module for EKS VPC
+│       ├── main.tf
+│       ├── variables.tf
+│       └── outputs.tf
+├── README.md                   
 ├── terratest/           # Automated Go tests with Terratest framework
 ├── backend.tf           # Terraform backend configuration (S3 + DynamoDB)
 ├── GitlabCICID          # GitLab CI pipeline config
