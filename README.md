@@ -9,7 +9,7 @@ This project demonstrates an MVP infrastructure-as-code (IaC) pipeline to provis
 
 - Provision complex AWS resources (EKS cluster)
 - Use Terraform modules for reusable infrastructure
-- Implement CI/CD pipeline via GitHub Actions
+- Implement CI/CD pipeline via Gitlab CICD
 - Track changes with versioning
 - Promote configurations across environments (dev → test → prod)
 - Include automated testing and breaking change detection
@@ -124,7 +124,7 @@ go test -v eks_test.go
 
 - GitHub: https://github.com/Jokimsteny/IaC-EKS-Pipeline
 - Documentation: ./README.md
-- CI/CD: GitHub Actions Workflow
+- CI/CD: Gitlab CICD
 - Test Framework: Terratest
 
 ---
