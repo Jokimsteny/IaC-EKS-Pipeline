@@ -67,7 +67,7 @@ terraform apply
 ## 🔁 Promotion Guidelines
 
 1. All changes must be tested in `dev` first.
-2. Merge changes to `test` via PR → GitHub Actions triggers `terraform plan` and `apply`.
+2. Merge changes to `test` via PR → Gitlab pipeline `terraform plan` and `apply`.
 3. Repeat for `prod`.
 
 ```bash
