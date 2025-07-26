@@ -31,7 +31,7 @@ eks-iac-pipeline/
 ├── GitlabCICID          # GitLab CI pipeline config
 │   └── .gitlab-ci.yml   
 ├── terratest            # Automated Go tests with Terratest framework
-   └── eks_test.go      
+│   └── eks_test.go      
 └── README.md
 
 ---
