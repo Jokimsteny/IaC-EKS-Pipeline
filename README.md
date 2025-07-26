@@ -122,5 +122,5 @@ source = "git::https://github.com/Jokimsteny/IaC-EKS-Pipeline.git//modules/eks?r
 
 ## 👏 Authors
 
-- Your Name (DevOps Engineer / SRE)
+- Jokimsteny (DevOps Engineer / SRE)
 - Contact: jokimsteny@gmail.com
