@@ -42,7 +42,7 @@ eks-iac-pipeline/
     - Terraform ≥ 1.3
     - AWS CLI
     - Go (for testing)
-    - GitHub CLI (optional for PR automation)
+    - GitHub CLI (optional for  automation)
 
 2. **Configure AWS Credentials**:
 ```bash
@@ -67,7 +67,7 @@ terraform apply
 ## 🔁 Promotion Guidelines
 
 1. All changes must be tested in `dev` first.
-2. Merge changes to `test` via PR → Gitlab pipeline `terraform plan` and `apply`.
+2. Merge changes to `test` via  → Gitlab pipeline `terraform plan` and `apply`.
 3. Repeat for `prod`.
 
 ```bash
@@ -98,7 +98,7 @@ assert.Equal(t, "dev-cluster", clusterName)
 
 ## 🛑 Breaking Change Detection
 
-- `terraform plan` generates diffs in PRs.
+- `terraform plan` generates diffs in MRs.
 - Optional: Use `terraform-compliance` or `infracost` to block high-risk changes.
 
 ---
