@@ -1,0 +1,8 @@
+version: 0.1
+
+projects:
+  - path: .
+    name: terraform-eks-mvp
+    terraform_workspace: default
+    usage_file: infracost-usage.yml
+

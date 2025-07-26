@@ -1,0 +1,35 @@
+version: 0.1
+
+resource_usage:
+
+  aws_eks_node_group.default:
+    instances: 3
+    instance_type: t3.medium
+    monthly_cpu_hours: 720
+    monthly_memory_gb: 12
+    operating_system: linux
+    storage_gb: 20
+
+  aws_nat_gateway.default:
+    monthly_data_processed_gb: 500
+
+  aws_lb.default:
+    new_connections: 1000000
+    active_connections: 10000
+    processed_bytes_gb: 1000
+    rule_evaluations: 2000000
+    http_requests: 3000000
+
+  aws_s3_bucket.my_logs:
+    storage_gb: 50
+    monthly_tier_1_requests: 10000
+    monthly_tier_2_requests: 5000
+
+  aws_dynamodb_table.lock_table:
+    write_request_units: 100
+    read_request_units: 100
+
+  aws_cloudwatch_log_group.eks_logs:
+    monthly_data_ingested_gb: 20
+    monthly_data_scanned_gb: 50
+
