@@ -19,18 +19,20 @@ This project demonstrates an MVP infrastructure-as-code (IaC) pipeline to provis
 ## 📁 Folder Structure
 
 ```
-.
-├── environments/
+eks-iac-pipeline/
+├── environments/        # Per-environment Terraform configs
 │   ├── dev/
 │   ├── test/
 │   └── prod/
-├── modules/
-│   └── eks/
-├── tests/
-├── .github/
-│   └── workflows/
+├── iam/                 # IAM roles and policies for EKS cluster & nodes
+├── modules/eks/         # Terraform module for EKS cluster & node groups
+├── terratest/           # Automated Go tests with Terratest framework
+├── backend.tf           # Terraform backend configuration (S3 + DynamoDB)
+├── GitlabCICID          # GitLab CI pipeline config
+│   └── .gitlab-ci.yml   
+├── terratest            # Automated Go tests with Terratest framework
+   └── eks_test.go      
 └── README.md
-```
 
 ---
 
@@ -106,9 +108,16 @@ assert.Equal(t, "dev-cluster", clusterName)
 Modules are versioned using Git tags.
 
 ```hcl
-source = "git::https://github.com/Jokimsteny/IaC-EKS-Pipeline.git//modules/eks?ref=v1.0.1"
+source = "git::https://github.com/Jokimsteny/IaC-EKS-Pipeline.git/"
 ```
 
+
+## Run Terratest locally (optional)
+bash
+Copy
+Edit
+cd terratest
+go test -v eks_test.go
 ---
 
 ## 📎 Resources

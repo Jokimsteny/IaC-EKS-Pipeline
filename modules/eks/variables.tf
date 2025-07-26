@@ -1,9 +1,30 @@
-variable "cluster_name" {}
-variable "cluster_role_arn" {}
+variable "cluster_name" {
+  type        = string
+  description = "EKS Cluster name"
+}
+
+variable "region" {
+  type        = string
+  description = "AWS region"
+}
+
 variable "subnet_ids" {
-  type = list(string)
+  type        = list(string)
+  description = "Subnet IDs for the cluster"
 }
-variable "tags" {
-  type = map(string)
-  default = {}
+
+variable "environment" {
+  type        = string
+  description = "Environment name"
 }
+
+variable "cluster_role_arn" {
+  type        = string
+  description = "IAM Role ARN for EKS Cluster"
+}
+
+variable "node_group_role_arn" {
+  type        = string
+  description = "IAM Role ARN for Node Group"
+}
+
