@@ -36,7 +36,12 @@ validate:
 plan:
   stage: plan
   script:
-    - terraform plan -out=tfplan -var="environment=${CI_ENVIRONMENT_NAME}" -var="region=${AWS_REGION}"
+    - terraform plan -no-color -out=tfplan -var="environment=${CI_ENVIRONMENT_NAME}" -var="region=${AWS_REGION}" | tee tfplan_output.txt
+    - |
+      if grep -qE "^-/(replace)|will be destroyed|-/+" tfplan_output.txt; then
+        echo "❌ Breaking change detected in Terraform plan!"
+        exit 1
+      fi
   artifacts:
     paths:
       - tfplan
@@ -61,4 +66,3 @@ tag:
     - git push origin --tags
   only:
     - main
-
