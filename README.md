@@ -133,14 +133,14 @@ go test -v eks_test.go
 
 ###   CICD
 
-Multi-stage CI/CD 
-Remote state backend   (S3 + DynamoDB)
-Plan validation 
-Breaking change detection 
-Cost estimation  (Infracost)
-Policy compliance (terraform-compliance)
-Manual apply step 
-Git tagging/versioning
+- Multi-stage CI/CD 
+- Remote state backend   (S3 + DynamoDB)
+- Plan validation 
+- Breaking change detection 
+- Cost estimation  (Infracost)
+- Policy compliance (terraform-compliance)
+- Manual apply step 
+- Git tagging/versioning
 
 
 ## 📎 Resources
