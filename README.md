@@ -90,7 +90,7 @@ git push origin test
 We use [Terratest](https://terratest.gruntwork.io/) for testing infrastructure components.
 
 ```bash
-cd teratest/
+cd terratest/
 go test -v eks_test.go
 ```
 
