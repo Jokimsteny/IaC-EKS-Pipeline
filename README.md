@@ -66,8 +66,7 @@ terraform plan
 terraform apply
 ```
 
-4. **CI/CD Setup**:
-   - GitHub Actions automatically runs on push to `main` for all environments.
+
 
 ---
 
@@ -131,7 +130,7 @@ go test -v eks_test.go
 ---
 
 
-###   CICD
+###   **CI/CD Setup**
 
 - Multi-stage CI/CD 
 - Remote state backend   (S3 + DynamoDB)
