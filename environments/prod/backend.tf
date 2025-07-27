@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket         = "terraform-state-iac-pipeline"
-    key            = "prod/terraform.tfstate"
+    key            = "eks/prod/terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "terraform-locks"
     encrypt        = true
