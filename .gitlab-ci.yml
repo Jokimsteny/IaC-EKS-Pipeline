@@ -1,4 +1,5 @@
 stages:
+  - format
   - init
   - validate
   - plan
@@ -12,8 +13,9 @@ variables:
   TF_STATE_BUCKET: "your-tfstate-bucket-name"
   DYNAMODB_TABLE: "terraform-locks"
 
+# Common setup before any job
 before_script:
-  - apk add --no-cache bash curl jq git
+  - apk add --no-cache bash curl jq git unzip
   - curl -fsSL https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_${TF_VERSION}_linux_amd64.zip -o terraform.zip
   - unzip terraform.zip
   - mv terraform /usr/local/bin/
@@ -21,7 +23,21 @@ before_script:
   - apk add --no-cache py3-pip
   - pip3 install awscli
   - aws --version
-  - terraform init -backend-config="bucket=${TF_STATE_BUCKET}" -backend-config="key=eks/${CI_ENVIRONMENT_NAME}/terraform.tfstate" -backend-config="region=${AWS_REGION}" -backend-config="dynamodb_table=${DYNAMODB_TABLE}"
+
+# 🔍 Linting & Formatting Stage
+format_lint:
+  stage: format
+  image: hashicorp/terraform:${TF_VERSION}
+  script:
+    - echo "Checking terraform formatting..."
+    - terraform fmt -recursive -check -diff
+    - echo "Installing TFLint..."
+    - apk add --no-cache curl unzip
+    - curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
+    - echo "Initializing TFLint..."
+    - tflint --init
+    - echo "Running TFLint..."
+    - tflint --recursive
 
 init:
   stage: init
