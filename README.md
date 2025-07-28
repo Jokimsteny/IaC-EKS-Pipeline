@@ -31,7 +31,6 @@ eks-iac-pipeline/
 │       ├── variables.tf
 │       └── outputs.tf
 ├── README.md                   
-├── terratest/           # Automated Go tests with Terratest framework
 ├── backend.tf           # Terraform backend configuration (S3 + DynamoDB)
 ├── .gitlab-ci.yml       # GitLab CI pipeline config
 ├── infracost       
