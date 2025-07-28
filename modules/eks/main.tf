@@ -63,6 +63,8 @@ resource "aws_route_table_association" "public" {
   route_table_id = aws_route_table.public.id
 }
 
+
+
 # --- IAM for EKS Cluster ---
 resource "aws_iam_role" "eks_cluster" {
   name = "${var.env}-eks-cluster-role"
