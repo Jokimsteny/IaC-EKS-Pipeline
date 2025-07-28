@@ -131,10 +131,11 @@ go test -v eks_test.go
 
 
 ###   **CI/CD Setup**
-<img width="1536" height="1024" alt="cicd" src="https://github.com/user-attachments/assets/8280c57e-63da-4587-b2be-9030466876d8" />
+<img width="1024" height="1536" alt="cicd-git" src="https://github.com/user-attachments/assets/6f72b2c3-35cc-40a8-8404-93d87ebf8f64" />
 
 - Multi-stage CI/CD 
 - Remote state backend   (S3 + DynamoDB)
+- lint and format 
 - Plan validation 
 - Breaking change detection 
 - Cost estimation  (Infracost)
