@@ -40,7 +40,8 @@ eks-iac-pipeline/
 ├── terratest            # Automated Go tests with Terratest framework
 │   └── eks_test.go
 ├── Docs                 # Runbook and ppt
-│   ├── Automating EKS with IaC.pptx			
+│   ├── Automating EKS with IaC.pptx
+│   ├── POC-  AWS for dev environment.pdf		
 │   └── IaC-EKS-Pipeline Deployment Runbook.docx
 └── README.md
 
