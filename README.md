@@ -38,7 +38,10 @@ eks-iac-pipeline/
 │   └── infracost.yml    # Optional: Infracost config
 │   └── infracost-usage.yml
 ├── terratest            # Automated Go tests with Terratest framework
-│   └── eks_test.go      
+│   └── eks_test.go
+├── Docs                 # Runbook and ppt
+│   ├── Automating EKS with IaC.pptx			
+│   └── IaC-EKS-Pipeline Deployment Runbook.docx
 └── README.md
 
 ---
