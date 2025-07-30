@@ -134,7 +134,8 @@ go test -v eks_test.go
 
 
 ###   **CI/CD Setup**
-<img width="500" height="600" alt="cicd-git" src="https://github.com/user-attachments/assets/6f72b2c3-35cc-40a8-8404-93d87ebf8f64" />
+<img width="697" height="437" alt="Screenshot 2025-07-30 at 10 18 39 AM" src="https://github.com/user-attachments/assets/9c6f47ef-1f83-42d4-9eb1-442b2085c83a" />
+
 
 - Multi-stage CI/CD 
 - Remote state backend   (S3 + DynamoDB)
